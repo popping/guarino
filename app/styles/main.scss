@@ -1,0 +1,103 @@
+// bower:scss
+// endbower
+
+@import "fonts.css";
+
+$page-width: 1362px;
+$page-height: 600px;
+$font-base: 12px;
+
+div, p, img, ul, li {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $page-width;
+    height: $page-height;
+    margin-left: -1 * ($page-width / 2);
+    margin-top: -1 * ($page-height / 2);
+    overflow: hidden;
+
+    .background {
+        background-color: #292929;
+        .img-background {
+            max-width: 100%;
+            height: auto;
+            z-index: -1;
+        }
+    }
+}
+
+.float-div {
+    display: block;
+    position: absolute;  
+}
+
+.cabecera {
+    top: 18px;
+    left: 0px;
+    right: 0px;
+    height: 84px;
+    background-image: url('../images/header-background-1362x84.png');
+    .logo-background {
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        width: 268px;
+        background-color: #FFFFFF;
+        .logo {
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            height: 142;
+        }
+    }
+    .contactos-background {
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 180px;
+        background-color: #00478c;
+        ul {
+            margin-top: 9px;
+            margin-right: 5px;
+            width: 100%;
+            height: 100%;
+            text-align: right;
+            li {
+                line-height: 15px;
+                list-style-type: none;
+                font-family: ubuntubold;
+                text-transform: uppercase;
+                font-size: 6pt;
+                color: #FFF;
+            }
+        }
+    }
+}
+
+.pie {
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 46px;
+    background-color: #292929;
+    .email {
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 300px;
+        color: #FFFFFF;
+        font-family: ubuntubold;
+        font-size: 9pt;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 46px;
+    }
+}
+
+

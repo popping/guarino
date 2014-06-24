@@ -1,0 +1,608 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margi",
+				"margin-right:   (property)"
+			],
+			[
+				"font",
+				"font-family:   (property)"
+			],
+			[
+				"u",
+				"uppercase"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"margin-",
+				"margin-left"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"wid",
+				"width:   (property)"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"border",
+				"border-color:   (property)"
+			],
+			[
+				"background",
+				"background-color:   (property)"
+			],
+			[
+				"calcu",
+				"calcularTotalGeneral"
+			],
+			[
+				"cal",
+				"calcularSubTotal"
+			],
+			[
+				"replace",
+				"replace"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"table",
+				"table-cell"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"ba",
+				"background-image"
+			],
+			[
+				"getNro",
+				"getNroSocio  (function)"
+			],
+			[
+				"getN",
+				"getNombres  (function)"
+			],
+			[
+				"getF",
+				"getFlashBag"
+			],
+			[
+				"getA",
+				"getApellido  (function)"
+			],
+			[
+				"temp",
+				"tempDir"
+			],
+			[
+				"ThinkWS",
+				"Thinkws  (namespace)"
+			],
+			[
+				"ob",
+				"ob_clean"
+			],
+			[
+				"ob_",
+				"ob_start"
+			],
+			[
+				"fecha",
+				"setFechaAlta"
+			],
+			[
+				"get",
+				"getRequiereAprobacion  (function)"
+			],
+			[
+				"pen",
+				"pendientesQuery  (variable)"
+			],
+			[
+				"per",
+				"perfilesQuery  (variable)"
+			],
+			[
+				"pass",
+				"passwdInForm"
+			],
+			[
+				"usu",
+				"usuariosQuery"
+			],
+			[
+				"dis",
+				"disableTag"
+			],
+			[
+				"padin",
+				"padding:   (property)"
+			],
+			[
+				"Date",
+				"DateTime  (class)"
+			],
+			[
+				"getOpe",
+				"getOperacionOtorgacion  (function)"
+			],
+			[
+				"setOper",
+				"setOperacionAnulacion  (function)"
+			],
+			[
+				"setOpe",
+				"setOperacionSolicitud  (function)"
+			],
+			[
+				"getOP",
+				"getOperacionAnulacion  (function)"
+			],
+			[
+				"fe",
+				"fechaBaja"
+			],
+			[
+				"getOper",
+				"getOperacionSolicitud  (function)"
+			],
+			[
+				"pe",
+				"Permiso  (class)"
+			],
+			[
+				"getO",
+				"getOperacionAprobacion  (function)"
+			],
+			[
+				"tipo",
+				"tipoServicio"
+			],
+			[
+				"sessio",
+				"session_params  (variable)"
+			],
+			[
+				"setCom",
+				"setComprobanteOtorgacion  (function)"
+			],
+			[
+				"setRequi",
+				"setRequiereOtorgacion  (function)"
+			],
+			[
+				"se",
+				"section	<section>"
+			],
+			[
+				"menu",
+				"menuitem"
+			],
+			[
+				"set",
+				"setSeccion  (function)"
+			],
+			[
+				"Menu",
+				"MenuItem"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"servicios",
+				"serviciosQuery  (variable)"
+			],
+			[
+				"con",
+				"concepto  (variable)"
+			],
+			[
+				"pading",
+				"padding-left"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"region",
+				"regiones"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 54.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 602.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/guarino/app/scripts/app.js",
+		"/var/www/guarino/app/styles/main.scss",
+		"/var/www/guarino/app/index.html",
+		"/var/www/guarino/app/styles/fonts.scss",
+		"/var/www/guarino/Gruntfile.js",
+		"/var/www/guarino/app/styles/ubuntu-b-webfont.eot",
+		"/var/www/prueba_guarino/index.html",
+		"/var/www/guarino/app/views/contact.html",
+		"/var/www/guarino/app/views/about.html",
+		"/var/www/guarino/app/views/main.html",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Entity/Concepto.php",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Entity/LiquidacionDetalle.php",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Entity/Liquidacion.php",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Servicios/ProcessActividades.php",
+		"/var/www/prueba_scroll/index.html",
+		"/var/www/sips/src/ThinkWS/MainBundle/DataFixtures/ORM/CSV/permisos.csv",
+		"/var/www/sips/src/ThinkWS/MainBundle/DataFixtures/ORM/CSV/operaciones.csv",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Contacto/edit.html.twig",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/public/css/login.css",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/public/css/error.css",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/public/css/cabecera.css",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/public/css/main.css",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/public/css/menu.css",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/public/css/listas.css",
+		"/var/www/guarino/index.html",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Socio/edit.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Contacto/index.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Controller/ContactoController.php",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Form/FamiliarType.php",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Familiar/show.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Familiar/edit.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Familiar/index.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Controller/FamiliarController.php",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Entity/Familiar.php",
+		"/home/popping/Escritorio/index.html",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Familiar/remove.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Familiar/new.html.twig",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Resources/views/ConceptoSocio/edit.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Entity/Socio.php",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Controller/BancoController.php",
+		"/var/www/guarino/upload.php",
+		"/var/www/guarino/js/app.js",
+		"/var/www/guarino/js/flow.js",
+		"/var/www/guarino/js/flow.min.js",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Form/ContactoType.php",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Entity/Contacto.php",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Form/BuscarType.php",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Contacto/show.html.twig",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/views/Form/field_row_table.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Actividad/index.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Socio/submenu.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Controller/BuscarController.php",
+		"/var/www/sips/vendor/twig/twig/test/Twig/Tests/Fixtures/tags/block/block_unique_name.test",
+		"/var/www/sips/app/bootstrap.php.cache",
+		"/var/www/sips/src/ThinkWS/SociosBundle/SociosBundle.php",
+		"/var/www/sips/src/ThinkWS/AdminBundle/AdminBundle.php",
+		"/var/www/sips/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Cell/HyperlinkTest.php",
+		"/var/www/sips/vendor/symfony/symfony/src/Symfony/Component/PropertyAccess/PropertyPathInterface.php",
+		"/var/www/sips/vendor/symfony/symfony/src/Symfony/Component/Templating/Helper/HelperInterface.php",
+		"/var/www/sips/vendor/phpunit/phpunit/tests/TextUI/testdox-html.phpt",
+		"/var/www/sips/tareas_realizadas.txt",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Resources/views/Banco/index.html.twig",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Resources/views/Banco/show.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Controller/LegajoController.php",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Contacto/new.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Socio/new.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Socio/show.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Form/SocioType.php",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Controller/SocioController.php",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Resources/views/Lugar/edit.html.twig",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Form/LugarType.php",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Form/ConceptoSocioType.php",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Resources/views/ConceptoSocio/show.html.twig",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Controller/AjaxController.php",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Controller/AjaxController.php",
+		"/var/www/sips/src/ThinkWS/MainBundle/Controller/MenuController.php",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/views/base.html.twig",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Resources/views/Cliente/index.html.twig",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Resources/views/Concepto/index.html.twig",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Resources/views/Listado/panelregion.html.twig",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Resources/views/Lugar/index.html.twig",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Resources/views/Monotributo/index.html.twig",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Resources/views/ObraSocial/index.html.twig",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Resources/views/Region/index.html.twig",
+		"/var/www/sips/src/ThinkWS/AdminBundle/Resources/views/Servicio/index.html.twig",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Resources/views/AdelantoOrdinario/index.html.twig",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Resources/views/ConceptoSocio/index.html.twig",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Resources/views/Excedente/Index.html.twig",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Resources/views/Exportacion/exportabanco.html.twig",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Resources/views/Exportacion/exportainaes.html.twig",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Resources/views/Exportacion/exportaooss.html.twig",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Resources/views/Movimiento/index.html.twig",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Resources/views/Servicios/index.html.twig",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Resources/views/ServiciosPendientes/index.html.twig",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/views/Listado/panelauditoria.html.twig",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/views/Perfil/index.html.twig",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/views/Usuario/index.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Buscar/buscar.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Legajo/index.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Listado/panelsocios.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Uniforme/index.html.twig",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Entity/EjercicioRepository.php",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Resources/views/Liquidacion/index.html.twig",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Controller/LiquidacionController.php",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/public/css/tablas.css",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/public/css/cuerpo.css",
+		"/var/www/sips/vendor/phpunit/php-code-coverage/tests/_files/class-with-anonymous-function-clover.xml",
+		"/var/www/sips/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Session/Flash/FlashBag.php",
+		"/var/www/sips/src/ThinkWS/MainBundle/Form/ListadoAuditoriaType.php",
+		"/var/www/sips/vendor/twig/twig/lib/Twig/Node/ForLoop.php",
+		"/var/www/sips/info/Info Nueva/FAMIL.xls",
+		"/var/www/sips/app/Resources/views/base.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Socio/remove.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Controller/AjaxController.php",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/public/js/jquery-2.0.3.min.js",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/public/css/jquery.alerts.css",
+		"/var/www/sips/src/ThinkWS/MainBundle/Resources/public/js/jquery.ui.draggable.js",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Form/MovimientoType.php",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Entity/ConceptoSocioRepository.php",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Servicios/ProcessConceptosSocio.php",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Servicios/ProcessMonotributo.php",
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Entity/LiquidacionSociosRepository.php",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Actividad/edit.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Actividad/new.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Controller/DefaultController.php",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Ajax/listLugares.html.twig",
+		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/config/routing.yml",
+		"/var/www/sips/app/config/routing.yml"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"p ",
+			"1366px",
+			"float",
+			"number",
+			"tipoconcepto",
+			"tipoConcepto",
+			"grilla",
+			"linea",
+			"font",
+			";\n",
+			"width_10",
+			"272",
+			"210",
+			"form_widget",
+			"edit_form",
+			"button",
+			"_widget",
+			"deleteForm",
+			"getFlashBag",
+			"editForm",
+			"edit_form",
+			"li",
+			"form.",
+			"form",
+			"edit_form",
+			"socio_id",
+			"totalBonificacion",
+			"flash-notice",
+			"field_info",
+			"fechaaprobacion",
+			"fechaanulacion",
+			"movimiento",
+			"consulta",
+			"editForm",
+			"EditForm",
+			"editForm",
+			"entity",
+			"            'thinkws_adminbundle_bancotype[field_name]'  => 'Foo',\n",
+			"Ruta",
+			"ruta",
+			"Valor",
+			"valor",
+			"Valor",
+			"valor",
+			"editForm",
+			"form_widget",
+			"head",
+			"formId",
+			"permiso",
+			"permisosOriginales",
+			"permiso",
+			"permisosCount",
+			"newPermiso",
+			"entity"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 112.0
+	},
+	"project": "guarino.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"buscartype",
+				"src/ThinkWS/SociosBundle/Form/BuscarType.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 232.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
