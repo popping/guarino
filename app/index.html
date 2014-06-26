@@ -28,15 +28,35 @@
                 <div class="logo-background float-div">
                     <img src="images/logo-268x142.png" class="logo">                    
                 </div>
+                <nav class="menu-central float-div">
+                    <ul>
+                        <li><a href="#/">HOME</a></li>
+                        <li><a href="#/estudio">ESTUDIO</a></li>
+                        <li><a href="#/galeria">GALERIA</a></li>
+                        <li><a href="#/procrear">PROCREAR</a></li>
+                        <li><a href="#/proyectos">PROYECTOS</a></li>
+                        <li><a href="#/contacto">CONTACTO</a></li>
+                    </ul>
+                </nav>   
                 <div class="contactos-background float-div">
                     <ul>
                         <li>02285-15220147</li>
-                        <li>ariadnaguarino@yahoo.com.ar</li>
-                        <li>ag.estudiointegral@yahoo.com.ar</li>
-                        <li>face: arq.ariadnaguarino</li>
+                        <li><a>ariadnaguarino@yahoo.com.ar</a></li>
+                        <li><a>ag.estudiointegral@yahoo.com.ar</a></li>
+                        <li><a>face: arq.ariadnaguarino</a></li>
                     </ul>
                 </div>
             </header>
+            <nav class="menu-lateral float-div">
+                <ul>
+                    <li><a href="#/">HOME</a></li>
+                    <li><a href="#/estudio">ESTUDIO</a></li>
+                    <li><a href="#/galeria">GALERIA</a></li>
+                    <li><a href="#/procrear">PROCREAR</a></li>
+                    <li><a href="#/proyectos">PROYECTOS</a></li>
+                </ul>
+            </nav>      
+            <section class="cuerpo float-div" ng-view></section>      
             <footer class="pie float-div">
                 <div class="email float-div">
                     <a class="link">ARIADNAGUARINO@YAHOO.COM.AR</a>
@@ -76,8 +96,14 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/estudio.js"></script>
+        <script src="scripts/controllers/galeria.js"></script>
+        <script src="scripts/controllers/procrear.js"></script>
+        <script src="scripts/controllers/proyectos.js"></script>
+        <script src="scripts/controllers/3d.js"></script>
+        <script src="scripts/controllers/reciclado.js"></script>
+        <script src="scripts/controllers/contacto.js"></script>
         <!-- endbuild -->
 </body>
 </html>

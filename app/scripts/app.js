@@ -20,16 +20,36 @@ angular
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'views/main.html',
-                controller: 'MainCtrl'
+                templateUrl: 'views/home.html',
+                controller: 'HomeCtrl'
             })
-            .when('/about', {
-                templateUrl: 'views/about.html',
-                controller: 'AboutCtrl'
+            .when('/estudio', {
+                templateUrl: 'views/estudio.html',
+                controller: 'EstudioCtrl'
             })
-            .when('/contact', {
-                templateUrl: 'views/contact.html',
-                controller: 'ContactCtrl'
+            .when('/galeria', {
+              templateUrl: 'views/galeria.html',
+              controller: 'GaleriaCtrl'
+            })
+            .when('/procrear', {
+              templateUrl: 'views/procrear.html',
+              controller: 'ProcrearCtrl'
+            })
+            .when('/proyectos', {
+              templateUrl: 'views/proyectos.html',
+              controller: 'ProyectosCtrl'
+            })
+            .when('/proyectos/3d', {
+              templateUrl: 'views/3d.html',
+              controller: '3dCtrl'
+            })
+            .when('/proyectos/reciclado', {
+              templateUrl: 'views/reciclado.html',
+              controller: 'RecicladoCtrl'
+            })
+            .when('/contacto', {
+              templateUrl: 'views/contacto.html',
+              controller: 'ContactoCtrl'
             })
             .otherwise({
                 redirectTo: '/'

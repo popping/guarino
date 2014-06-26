@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name guarinoApp.controller:MainCtrl
+ * @name guarinoApp.controller:3dCtrl
  * @description
- * # MainCtrl
+ * # 3dCtrl
  * Controller of the guarinoApp
  */
 angular.module('guarinoApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('3dCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

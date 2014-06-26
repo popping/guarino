@@ -6,10 +6,18 @@
 $page-width: 1362px;
 $page-height: 600px;
 $font-base: 12px;
+$contacto-link-color: #f6f6f6;
+$menu-central-color: #00478c;
+$menu-lateral-color: #f6f6f6;
 
-div, p, img, ul, li {
+div, p, img, ul, li, a {
     margin: 0px;
     padding: 0px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .main {
@@ -43,6 +51,7 @@ div, p, img, ul, li {
     right: 0px;
     height: 84px;
     background-image: url('../images/header-background-1362x84.png');
+    z-index: 10;
     .logo-background {
         top: 0px;
         left: 0px;
@@ -56,6 +65,30 @@ div, p, img, ul, li {
             height: 142;
         }
     }
+    .menu-central {
+        top: 38px;
+        left: 375px;
+        bottom: 0px;
+        right: 0px;
+        ul {
+            li {
+                display: inline-block;
+                list-style-type: none;
+                line-height: 13px;
+                margin-right: 68px;
+                a {
+                    font-family: ubunturegular;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: 9pt;
+                    color: $menu-central-color;
+                }
+                a:hover {
+                    color: tint($menu-central-color, 20%);    
+                }
+            }
+        }
+    }
     .contactos-background {
         top: 0px;
         right: 0px;
@@ -63,20 +96,56 @@ div, p, img, ul, li {
         width: 180px;
         background-color: #00478c;
         ul {
-            margin-top: 9px;
-            margin-right: 5px;
-            width: 100%;
-            height: 100%;
+            margin-top: 15px;
+            margin-right: 10px;
             text-align: right;
             li {
                 line-height: 15px;
                 list-style-type: none;
-                font-family: ubuntubold;
+                font-family: ubunturegular;
+                font-weight: bold;
                 text-transform: uppercase;
                 font-size: 6pt;
-                color: #FFF;
+                color: $menu-lateral-color;
+                a:hover {
+                    color: shade($menu-lateral-color, 20%);
+                }
             }
         }
+    }
+}
+
+.menu-lateral {
+    top: 200px;
+    left: 74px;
+    bottom: 46px;
+    right: 1180px;
+    ul {
+        li {
+            list-style-type: none;
+            line-height: 26px;
+            a {
+                font-family: ubunturegular;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 9pt;
+                color: $menu-lateral-color;
+            }
+            a:hover {
+                color: shade($menu-lateral-color, 20%);
+            }
+        }
+    }
+}
+
+.cuerpo {
+    top: 52px;
+    bottom: 46px;
+    left: 180px;
+    right: 180px;
+    background: #888;
+    p {
+        line-height: 300px;
     }
 }
 
@@ -86,17 +155,22 @@ div, p, img, ul, li {
     right: 0px;
     height: 46px;
     background-color: #292929;
+    z-index: 10;
     .email {
         top: 0px;
         right: 0px;
         bottom: 0px;
-        width: 300px;
-        color: #FFFFFF;
-        font-family: ubuntubold;
-        font-size: 9pt;
-        text-transform: uppercase;
+        width: 250px;
         text-align: center;
         line-height: 46px;
+        font-family: ubunturegular;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 8pt;
+        color: $contacto-link-color;
+        a:hover {
+            color: shade($menu-lateral-color, 20%);
+        }
     }
 }
 
