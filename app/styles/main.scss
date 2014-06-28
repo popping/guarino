@@ -2,6 +2,7 @@
 // endbower
 
 @import "fonts.css";
+@import "animations.css";
 
 $page-width: 1362px;
 $page-height: 600px;
@@ -143,9 +144,13 @@ a {
     bottom: 46px;
     left: 180px;
     right: 180px;
-    background: #888;
-    p {
-        line-height: 300px;
+    .frame {
+        width: 1002px;
+        height: 502px;
+        background: #888;
+        p {
+            line-height: 300px;
+        }
     }
 }
 
@@ -173,5 +178,3 @@ a {
         }
     }
 }
-
-

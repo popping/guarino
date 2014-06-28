@@ -1,0 +1,135 @@
+.animation-up.ng-enter {
+    -webkit-animation: enter-up;
+    -webkit-animation-duration: 1s; 
+}
+
+.animation-up.ng-leave {
+    -webkit-animation: leave-up;
+    -webkit-animation-duration: 1s; 
+}
+
+@-webkit-keyframes enter-up {
+    from {
+        margin-top: 100%;
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 0%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes leave-up {
+    from {
+        margin-top: 0%;
+        opacity: 1;
+    }
+
+    to {
+        margin-top: -100%;
+        opacity: 0;
+    }
+}
+
+.animation-down.ng-enter {
+    -webkit-animation: enter-down;
+    -webkit-animation-duration: 1s; 
+}
+
+.animation-down.ng-leave {
+    -webkit-animation: leave-down;
+    -webkit-animation-duration: 1s; 
+}
+
+@-webkit-keyframes enter-down {
+    from {
+        margin-top: -100%;
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 0%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes leave-down {
+    from {
+        margin-top: 0%;
+        opacity: 1;
+    }
+
+    to {
+        margin-top: 100%;
+        opacity: 0;
+    }
+}
+
+.animation-left.ng-enter {
+    -webkit-animation: enter-left;
+    -webkit-animation-duration: 1s; 
+}
+
+.animation-left.ng-leave {
+    -webkit-animation: leave-left;
+    -webkit-animation-duration: 1s; 
+}
+
+@-webkit-keyframes enter-left {
+    from {
+        margin-left: 100%;
+        opacity: 0;
+    }
+
+    to {
+        margin-left: 0%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes leave-left {
+    from {
+        margin-left: 0%;
+        opacity: 1;
+    }
+
+    to {
+        margin-left: -100%;
+        opacity: 0;
+    }
+}
+
+.animation-right.ng-enter {
+    -webkit-animation: enter-right;
+    -webkit-animation-duration: 1s; 
+}
+
+.animation-right.ng-leave {
+    -webkit-animation: leave-right;
+    -webkit-animation-duration: 1s; 
+}
+
+@-webkit-keyframes enter-right {
+    from {
+        margin-left: -100%;
+        opacity: 0;
+    }
+
+    to {
+        margin-left: 0%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes leave-right {
+    from {
+        margin-left: 0%;
+        opacity: 1;
+    }
+
+    to {
+        margin-left: 100%;
+        opacity: 0;
+    }
+}
