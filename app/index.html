@@ -20,7 +20,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="main">
+    <div class="main" ng-controller="MainCtrl">
             <div class="background">
                 <img class="img-background" src="/images/fondo-imagen-1362x600.png">
             </div>
@@ -30,12 +30,14 @@
                 </div>
                 <nav class="menu-central float-div">
                     <ul>
-                        <li><a href="#/">HOME</a></li>
-                        <li><a href="#/estudio">ESTUDIO</a></li>
-                        <li><a href="#/galeria">GALERIA</a></li>
-                        <li><a href="#/procrear">PROCREAR</a></li>
-                        <li><a href="#/proyectos">PROYECTOS</a></li>
-                        <li><a href="#/contacto">CONTACTO</a></li>
+                        <li ng-repeat="item in menuCentral.items">
+                            <a ng-href="{{ item.link }}" ng-click="setSelected('central', $index)">{{ item.name }}</a>
+                            <ul class="sub" ng-if="item.items != null">
+                                <li ng-repeat="subitem in item.items">
+                                    <a ng-href="{{ subitem.link }}" ng-click="setSelected('central', $index)">{{ subitem.name }}</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>   
                 <div class="contactos-background float-div">
@@ -49,14 +51,10 @@
             </header>
             <nav class="menu-lateral float-div">
                 <ul>
-                    <li><a href="#/">HOME</a></li>
-                    <li><a href="#/estudio">ESTUDIO</a></li>
-                    <li><a href="#/galeria">GALERIA</a></li>
-                    <li><a href="#/procrear">PROCREAR</a></li>
-                    <li><a href="#/proyectos">PROYECTOS</a></li>
+                    <li ng-repeat="item in menuLateral.items"><a ng-href="{{ item.link }}" ng-click="setSelected('lateral', $index)">{{ item.name }}</a></li>
                 </ul>
             </nav>      
-            <section class="cuerpo float-div animation-down" ng-view></section>      
+            <section class="cuerpo float-div" ng-class="classAnimation" ng-view></section>      
             <footer class="pie float-div">
                 <div class="email float-div">
                     <a class="link">ARIADNAGUARINO@YAHOO.COM.AR</a>
@@ -101,7 +99,6 @@
         <script src="scripts/controllers/estudio.js"></script>
         <script src="scripts/controllers/galeria.js"></script>
         <script src="scripts/controllers/procrear.js"></script>
-        <script src="scripts/controllers/proyectos.js"></script>
         <script src="scripts/controllers/3d.js"></script>
         <script src="scripts/controllers/reciclado.js"></script>
         <script src="scripts/controllers/contacto.js"></script>

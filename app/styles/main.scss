@@ -77,7 +77,7 @@ a {
                 list-style-type: none;
                 line-height: 13px;
                 margin-right: 68px;
-                a {
+                a, span {
                     font-family: ubunturegular;
                     font-weight: bold;
                     text-transform: uppercase;
@@ -86,6 +86,22 @@ a {
                 }
                 a:hover {
                     color: tint($menu-central-color, 20%);    
+                }
+                ul {
+                    position: absolute;
+                    li {
+                        display: list-item;
+                        a {
+                            font-family: ubunturegular;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            font-size: 7pt;
+                            color: $menu-central-color;
+                        }
+                        a:hover {
+                            color: tint($menu-central-color, 20%);    
+                        }   
+                    }
                 }
             }
         }
@@ -125,7 +141,7 @@ a {
         li {
             list-style-type: none;
             line-height: 26px;
-            a {
+            a, span {
                 font-family: ubunturegular;
                 font-weight: bold;
                 text-transform: uppercase;
