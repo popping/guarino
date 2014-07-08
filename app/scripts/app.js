@@ -57,56 +57,88 @@ guarinoApp.config(function ($routeProvider) {
 });
 
 guarinoApp.controller('MainCtrl', function($scope) {
-    $scope.itemSelected = 0;
-    $scope.classAnimation = '';
 
     $scope.menuCentral = {
         items: [
             {
                 name: 'Home',
                 link: '#/',
+                panel: 'superior',
                 direccion: 'horizontal',
+                index: 1,
+                popup: false,
+                subitem: false,
                 items: null
             },
             {
                 name: 'Estudio',
                 link: '#/estudio',
+                panel: 'superior',
                 direccion: 'horizontal',
+                index: 2,
+                popup: false,
+                subitem: false,
                 items: null
             },
             {
                 name: 'Galeria',
                 link: '#/galeria',
+                panel: 'superior',
                 direccion: 'horizontal',
+                index: 3,
+                popup: false,
+                subitem: false,
                 items: null
             },
             {
                 name: 'Procrear',
                 link: '#/procrear',
+                panel: 'superior',
                 direccion: 'horizontal',
+                index: 4,
+                popup: false,
+                subitem: false,
                 items: null
             },
             {
                 name: 'Proyectos',
-                direccion: 'horizontal',
                 link: '',
+                panel: 'superior',
+                direccion: 'horizontal',
+                index: 5,
+                popup: false,
+                subitem: false,
                 items: [
                     {  
                         name: '3d',
                         link: '#/proyectos/3d',
-                        direccion: 'vertical'
+                        panel: 'superior',
+                        direccion: 'vertical',
+                        index: 6,
+                        popup: false,
+                        subitem: true,
+                        items: null
                     }, 
                     {
                         name: 'Reciclado',
                         link: '#/proyectos/reciclado',
-                        direccion: 'vertical'
+                        panel: 'superior',
+                        direccion: 'vertical',
+                        index: 7,
+                        popup: false,
+                        subitem: true,
+                        items: null
                     }
                 ]
             },
             {
                 name: 'Contacto',
                 link: '#/contacto',
+                panel: 'superior',
                 direccion: 'horizontal',
+                index: 8,
+                popup: false,
+                subitem: false,
                 items: null
             }        
         ]
@@ -117,53 +149,126 @@ guarinoApp.controller('MainCtrl', function($scope) {
             {
                 name: 'Home',
                 link: '#/',
+                panel: 'lateral',
                 direccion: 'vertical',
+                index: 1,
+                popup: false,
+                subitem: false,
                 items: null
             },
             {
                 name: 'Estudio',
                 link: '#/estudio',
+                panel: 'lateral',
                 direccion: 'vertical',
+                index: 2,
+                popup: false,
+                subitem: false,
                 items: null
             },
             {
                 name: 'Galeria',
                 link: '#/galeria',
+                panel: 'lateral',
                 direccion: 'vertical',
+                index: 3,
+                popup: false,
+                subitem: false,
                 items: null
             },
             {
                 name: 'Procrear',
                 link: '#/procrear',
+                panel: 'lateral',
                 direccion: 'vertical',
+                index: 4,
+                popup: false,
+                subitem: false,
                 items: null
             },
             {
                 name: 'Proyectos',
                 link: '#/proyectos',
+                panel: 'lateral',
                 direccion: 'vertical',
+                index: 5,
+                popup: false,
+                subitem: false,
+                items: [
+                    {  
+                        name: '3d',
+                        link: '#/proyectos/3d',
+                        panel: 'lateral',
+                        direccion: 'vertical',
+                        index: 6,
+                        popup: false,
+                        subitem: true,
+                        items: null
+                    }, 
+                    {
+                        name: 'Reciclado',
+                        link: '#/proyectos/reciclado',
+                        panel: 'lateral',
+                        direccion: 'vertical',
+                        index: 7,
+                        popup: false,
+                        subitem: true,
+                        items: null
+                    }
+                ]
             }     
         ]
     };
 
-    $scope.setSelected = function(direccion, index) {
-        if($scope.itemSelected != index) {
-            if(direccion == 'horizontal') {
-                if($scope.itemSelected > index) {
-                    $scope.classAnimation = 'animation-right';
-                } else {
-                    $scope.classAnimation = 'animation-left';
+    $scope.itemSelected     = $scope.menuCentral.items[0];
+    $scope.panelAnterior    = '';
+    $scope.classAnimation   = '';
+    $scope.lastOpenPopup    = null;
+
+    $scope.setSelected      = function(item) {
+        var panel       = item.panel;
+        var direccion   = item.direccion;
+        var index       = item.index;
+        var popup       = item.items !== null;
+        var cambioPanel = false;
+
+        if(popup) {
+            item.popup = !item.popup;
+
+            if($scope.lastOpenPopup !== null) {
+                $scope.lastOpenPopup.popup = false;                
+            }
+
+            $scope.lastOpenPopup = item;
+        } else {
+            if($scope.itemSelected.index !== index) {
+                if($scope.panelAnterior !== '' && $scope.panelAnterior !== panel) {
+                    cambioPanel = true;            
                 }
-            } else {
-                if($scope.itemSelected > index) {
-                    $scope.classAnimation = 'animation-down';
+
+                if(direccion === 'horizontal') {
+                    if(cambioPanel || ($scope.itemSelected.index < index)) {
+                        $scope.classAnimation = 'animation-left';
+                    } else {
+                        $scope.classAnimation = 'animation-right';
+                    }
                 } else {
-                    $scope.classAnimation = 'animation-up';
+                    if(cambioPanel || $scope.itemSelected.index < index) {
+                        $scope.classAnimation = 'animation-up';
+                    } else {
+                        $scope.classAnimation = 'animation-down';
+                    }
                 }
+            }
+
+            if(!item.subitem && $scope.lastOpenPopup !== null) {
+                $scope.lastOpenPopup.popup = false;
+                $scope.lastOpenPopup = null;
             }
         }
 
-        $scope.itemSelected = index;
+        $scope.itemSelected = item;
+        $scope.panelAnterior = panel;
     };
 });
 

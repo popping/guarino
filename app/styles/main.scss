@@ -89,6 +89,7 @@ a {
                 }
                 ul {
                     position: absolute;
+                    text-indent: 8px;
                     li {
                         display: list-item;
                         a {
@@ -150,6 +151,24 @@ a {
             }
             a:hover {
                 color: shade($menu-lateral-color, 20%);
+            }
+            ul {
+                position: absolute;
+                text-indent: 8px;
+                li {
+                    display: list-item;
+                    line-height: 13px;  
+                    a {
+                        font-family: ubunturegular;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        font-size: 7pt;
+                        color: $menu-lateral-color;
+                    }
+                    a:hover {
+                        color: shade($menu-lateral-color, 20%);    
+                    }   
+                }
             }
         }
     }
