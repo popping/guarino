@@ -31,10 +31,10 @@
                 <nav class="menu-central float-div">
                     <ul>
                         <li ng-repeat="item in menuCentral.items">
-                            <a ng-href="{{ item.link }}" ng-click="setSelected('central', $index)">{{ item.name }}</a>
+                            <a ng-href="{{ item.link }}" ng-click="setSelected('horizontal', $index)">{{ item.name }}</a>
                             <ul class="sub" ng-if="item.items != null">
                                 <li ng-repeat="subitem in item.items">
-                                    <a ng-href="{{ subitem.link }}" ng-click="setSelected('central', $index)">{{ subitem.name }}</a>
+                                    <a ng-href="{{ subitem.link }}" ng-click="setSelected('vertical', $index)">{{ subitem.name }}</a>
                                 </li>
                             </ul>
                         </li>
@@ -51,7 +51,7 @@
             </header>
             <nav class="menu-lateral float-div">
                 <ul>
-                    <li ng-repeat="item in menuLateral.items"><a ng-href="{{ item.link }}" ng-click="setSelected('lateral', $index)">{{ item.name }}</a></li>
+                    <li ng-repeat="item in menuLateral.items"><a ng-href="{{ item.link }}" ng-click="setSelected('vertical', $index)">{{ item.name }}</a></li>
                 </ul>
             </nav>      
             <section class="cuerpo float-div" ng-class="classAnimation" ng-view></section>      
