@@ -14,6 +14,28 @@ module.exports = function (grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
+  
+  // grunt-connect-proxy middleware to serve PHP
+  var proxyMiddleware = function (connect, options) {
+    var middlewares = [];
+    var directory = options.directory || options.base[options.base.length - 1];
+    if (!Array.isArray(options.base)) {
+      options.base = [options.base];
+    }
+
+    // Setup the proxy
+    middlewares.push(require('grunt-connect-proxy/lib/utils').proxyRequest);
+
+    options.base.forEach(function(base) {
+      // Serve static files.
+      middlewares.push(connect.static(base));
+    });
+
+    // Make directory browse-able.
+    middlewares.push(connect.directory(directory));
+
+    return middlewares;
+  };
 
   // Configurable paths for the application
   var appConfig = {
@@ -56,11 +78,16 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
+          '<%= yeoman.app %>/api/{,{config,src,tests}/**/}/*',
           '<%= yeoman.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
-      }
+      },
+      phpTest: {
+        files: ['<%= yeoman.app %>/api/{,{config,src,tests}/**/}/*'],
+        tasks: ['shell:phpTest']
+      }      
     },
 
     // The actual grunt server settings
@@ -71,10 +98,17 @@ module.exports = function (grunt) {
         hostname: 'localhost',
         livereload: 35729
       },
+      proxies: [
+        {
+          context: '/api',
+          host: 'localhost',
+          port: '<%= php.options.port %>'
+        }
+      ],
       livereload: {
         options: {
           open: true,
-          middleware: function (connect) {
+          middleware: function (connect, options) {
             return [
               connect.static('.tmp'),
               connect().use(
@@ -82,14 +116,14 @@ module.exports = function (grunt) {
                 connect.static('./bower_components')
               ),
               connect.static(appConfig.app)
-            ];
+            ].concat(proxyMiddleware(connect, options));
           }
         }
       },
       test: {
         options: {
           port: 9001,
-          middleware: function (connect) {
+          middleware: function (connect, options) {
             return [
               connect.static('.tmp'),
               connect.static('test'),
@@ -98,14 +132,35 @@ module.exports = function (grunt) {
                 connect.static('./bower_components')
               ),
               connect.static(appConfig.app)
-            ];
+            ].concat(proxyMiddleware(connect, options));
           }
         }
       },
       dist: {
         options: {
           open: true,
-          base: '<%= yeoman.dist %>'
+          base: '<%= yeoman.dist %>',
+          middleware: proxyMiddleware
+        }
+      }
+    },
+
+    // PHP built-in server
+    php: {
+      options: {
+        port: 8000,
+        // Change this to '0.0.0.0' to access the server from outside.
+        hostname: '127.0.0.1',
+        router: 'index.php'
+      },
+      server: {
+        options: {
+          base: '<%= yeoman.app %>/api',
+        }
+      },
+      dist: {
+        options: {
+          base: '<%= yeoman.dist %>/api',
         }
       }
     },
@@ -340,6 +395,7 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
           src: [
+            'api/**',
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
@@ -377,6 +433,20 @@ module.exports = function (grunt) {
       ]
     },
 
+    shell: {
+      options: {
+        stdout: true,
+        stderr: true,
+        failOnError: true
+      },
+      phpTest: {
+        command: 'make --directory <%= yeoman.app %>/api test'
+      },
+      phpUpdate: {
+        command: 'make --directory <%= yeoman.app %>/api update'
+      }
+    },
+
     // Test settings
     karma: {
       unit: {
@@ -389,7 +459,12 @@ module.exports = function (grunt) {
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
+      return grunt.task.run([
+        'build', 
+        'configureProxies',
+        'php:dist',
+        'connect:dist:keepalive'
+      ]);
     }
 
     grunt.task.run([
@@ -397,6 +472,8 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'autoprefixer',
+      'configureProxies',
+      'php:server',
       'connect:livereload',
       'watch'
     ]);
@@ -409,6 +486,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:server',
+    'shell:phpTest',
     'concurrent:test',
     'autoprefixer',
     'connect:test',

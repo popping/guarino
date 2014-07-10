@@ -14,7 +14,8 @@ var guarinoApp = angular.module('guarinoApp', [
         'ngResource',
         'ngRoute',
         'ngSanitize',
-        'ngTouch'
+        'ngTouch',
+        'flow'
 ]);
     
 guarinoApp.config(function ($routeProvider) {
