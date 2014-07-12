@@ -1,18 +1,26 @@
 <div class="frame">
-    <p>This is the home view.</p>
+    <p>CHOTO</p>
 
     <div flow-init="{target: 'api/upload'}"
          flow-files-submitted="$flow.upload()"
          flow-file-success="$file.msg = $message">
 
-      <input type="file" flow-btn/>
+        <button flow-btn>Subir</button>
 
-      <table>
-        <tr ng-repeat="file in $flow.files">
-            <td>{{$index+1}}</td>
-            <td>{{file.name}}</td>
-            <td>{{file.msg}}</td>
-        </tr>
-      </table>
+        <table>
+            <tbody>
+                <tr ng-repeat="file in $flow.files">
+                    <td>{{ $index + 1 }}</td>
+                    <td>{{ file.name }}</td>
+                    <td>{{ file.msg }}</td>
+                    <td>{{ (file.progress() * 100).toFixed(2) }}% Complete</td>
+                    <td>
+                        <div class="progress-bar" ng-class="{active: file.isUploading()}">
+                            <div ng-style="{width: (file.progress() * 100) + '%'}"></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

@@ -7,7 +7,7 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
@@ -151,7 +151,7 @@ module.exports = function (grunt) {
         port: 8000,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: '127.0.0.1',
-        router: 'index.php'
+        router: 'router.php'
       },
       server: {
         options: {

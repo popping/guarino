@@ -315,7 +315,7 @@
 			"file": "app/views/home.html",
 			"settings":
 			{
-				"buffer_size": 444,
+				"buffer_size": 946,
 				"line_ending": "Unix"
 			}
 		},
@@ -323,7 +323,7 @@
 			"file": "app/api/index.php",
 			"settings":
 			{
-				"buffer_size": 2423,
+				"buffer_size": 472,
 				"line_ending": "Unix"
 			}
 		}
@@ -379,6 +379,11 @@
 	},
 	"file_history":
 	[
+		"/var/www/guarino/app/api/upload.php",
+		"/var/www/guarino/app/api/upload-images/choto",
+		"/var/www/guarino/app/api/upload-images/prueba",
+		"/var/www/prueba/prueba.py",
+		"/var/www/guarino/app/api/upload-images/blob",
 		"/var/www/guarino/app/api/composer.json",
 		"/var/www/guarino/.editorconfig",
 		"/var/www/guarino/package.json",
@@ -501,12 +506,7 @@
 		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Legajo/index.html.twig",
 		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Listado/panelsocios.html.twig",
 		"/var/www/sips/src/ThinkWS/SociosBundle/Resources/views/Uniforme/index.html.twig",
-		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Entity/EjercicioRepository.php",
-		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Resources/views/Liquidacion/index.html.twig",
-		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Controller/LiquidacionController.php",
-		"/var/www/sips/src/ThinkWS/MainBundle/Resources/public/css/tablas.css",
-		"/var/www/sips/src/ThinkWS/MainBundle/Resources/public/css/cuerpo.css",
-		"/var/www/sips/vendor/phpunit/php-code-coverage/tests/_files/class-with-anonymous-function-clover.xml"
+		"/var/www/sips/src/ThinkWS/LiquidacionBundle/Entity/EjercicioRepository.php"
 	],
 	"find":
 	{
@@ -608,7 +608,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -624,8 +624,8 @@
 						"selection":
 						[
 							[
-								1443,
-								1443
+								2890,
+								2890
 							]
 						],
 						"settings":
@@ -787,7 +787,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 324.0,
+						"translation.y": 698.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -1346,15 +1346,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 444,
+						"buffer_size": 946,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								94,
-								94
+								470,
+								470
 							]
 						],
 						"settings":
@@ -1512,13 +1512,14 @@
 							"codeintel_tooltips": "popup",
 							"sublime_auto_complete": true,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1527,15 +1528,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2423,
+						"buffer_size": 472,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1554,
-								1554
+								466,
+								466
 							]
 						],
 						"settings":
@@ -1700,7 +1701,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

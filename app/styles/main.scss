@@ -213,3 +213,25 @@ a {
         }
     }
 }
+
+.progress-bar {
+    display: none;
+    position: relative;
+    width: 100px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    overflow: hidden;
+    div {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        width: 0%;
+        background-color: #D00;
+    }
+}
+
+.active {
+    display: block;
+}
