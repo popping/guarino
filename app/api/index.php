@@ -4,7 +4,7 @@ require_once __DIR__.'/vendor/autoload.php';
 $app = new Silex\Application();
 $app['debug'] = true;
 
-$app->get('/api/', function() {
+$app->get('/', function() {
 	return "<h1>Welcome to silex</h1>";
 });
 
