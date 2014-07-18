@@ -1,23 +1,53 @@
 <?php
 require_once __DIR__.'/vendor/autoload.php'; 
 
+use Flow\Config;
+use Flow\Request;
+use Flow\File;
+
 $app = new Silex\Application();
 $app['debug'] = true;
 
-$app->get('/', function() {
-	return "<h1>Welcome to silex</h1>";
-});
+$app->match('/upload', function() use ($app) { 
+    $config     = new Config(array(
+        'tempDir' => './temp/tmp'
+    ));
 
-$app->get('/api/prueba', function() {
-	return "<h1>prueba</h1>";
-});
+    $request    = new Request();
+    $file       = new File($config, $request);
 
-$app->get('/api/prueba/choto', function() {
-	return "<h1>prueba choto</h1>";
-});
+    if($_SERVER['REQUEST_METHOD'] === 'GET') {
+        if($file->checkChunk()) {
+            header("HTTP/1.1 200 Ok");
+        } else {
+            header("HTTP/1.1 404 Not Found");
+            return; 
+        }
+    } else {
+        if($file->validateChunk()) {
+            $file->saveChunk();
+        } else {
+            // error, invalid chunk upload request, retry
+            header("HTTP/1.1 400 Bad Request");
+            return;
+        }
+    }
 
-$app->get('/api/prueba/choto/poronga', function() {
-	return "<h1>prueba choto poronga</h1>";
-});
+    if($file->validateFile() && $file->save('./temp/'.$request->getFilename())) {
+        return $app->json([
+            'success' => true,
+            'files'   => $_FILES,
+            'get'     => $_GET,
+            'post'    => $_POST
+        ]);
+    } else {
+        return $app->json([
+            'success' => false,
+            'files'   => $_FILES,
+            'get'     => $_GET,
+            'post'    => $_POST
+        ]);
+    }
+})->method('GET|POST');
 
 $app->run(); 
