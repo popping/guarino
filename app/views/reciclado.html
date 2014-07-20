@@ -1,3 +1,21 @@
-<div class="frame">
-	<p>This is the reciclado view.</p>
+<div class="proyectos_main float-div" ng-controller="RecicladoCtrl">
+    <div class="imagen float-div">
+        <div class="imagen_principal float-div">
+            <img align=center ng-repeat="image in images" ng-src="{{ image.imagen }}" ng-hide="!isCurrentIndex($index)">
+        </div>
+        <div class="left-arrow float-div"><img src="images/left-arrow.png"></div>
+        <div class="container float-div">
+            <div class="thumbs">
+                <div class="thumb" ng-repeat="image in images">
+                    <img ng-src="{{ image.imagen }}" ng-click="setCurrentIndex($index)">                
+                </div>
+            </div>
+        </div>
+        <div class="right-arrow float-div"><img src="images/right-arrow.png"></div>
+    </div>
+	<div class="texto float-div">
+        <p>
+		  {{ images[actual].texto }}
+        </p>
+	</div>
 </div>

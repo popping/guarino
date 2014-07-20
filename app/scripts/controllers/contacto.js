@@ -7,11 +7,12 @@
  * # ContactoCtrl
  * Controller of the guarinoApp
  */
-angular.module('guarinoApp')
-  .controller('ContactoCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+guarinoApp = angular.module('guarinoApp');
+guarinoApp.controller('ContactoCtrl', function ($scope) {
+    $scope.submitmail = function(contacto) {
+    	alert("Ha Mandado un mail");
+    	console.log("name: " + contacto.name);
+    	console.log("email: " + contacto.email);
+    	console.log("message: " + contacto.message);
+    }
+});

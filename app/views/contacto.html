@@ -1,3 +1,17 @@
-<div class="frame">
-	<p>This is the contacto view.</p>
+<div class="contacto_main float-div" ng-controller="ContactoCtrl">
+    <div class="borde float-div">
+    	<div class="texto float-div">
+    		<form>
+    			<ul>
+    				<li><label for="name">Nombre</label></li>
+	    			<li><input type="text" id="name" autofocus ng-model="contacto.name" required></li>
+	    			<li><label for="email">Email</label></li>
+	    			<li><input type="email" id="email" ng-model="contacto.email" required></li>
+	    			<li><label for="message">Mensaje</label></li>
+	    			<li><textarea id="message" ng-model="contacto.message" required></textarea></li>
+	    			<li><button ng-click="submitmail(contacto)">Enviar</button></li>
+    			</ul>
+    		</form>
+		</div>
+    </div>
 </div>

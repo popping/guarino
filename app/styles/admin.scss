@@ -1,0 +1,47 @@
+// bower:scss
+// endbower
+
+$page-width: 1362px;
+$page-height: 600px;
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $page-width;
+    height: $page-height;
+    margin-left: -1 * ($page-width / 2);
+    margin-top: -1 * ($page-height / 2);
+    overflow: hidden;
+
+    .background {
+        background-color: #292929;
+        .img-background {
+            max-width: 100%;
+            height: auto;
+            z-index: -1;
+        }
+    }
+}
+
+.progress-bar {
+    display: none;
+    position: relative;
+    width: 100px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    overflow: hidden;
+    div {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        width: 0%;
+        background-color: #D00;
+    }
+}
+
+.active {
+    display: block;
+}

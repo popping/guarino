@@ -7,11 +7,19 @@
  * # RecicladoCtrl
  * Controller of the guarinoApp
  */
-angular.module('guarinoApp')
-  .controller('RecicladoCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+guarinoApp = angular.module('guarinoApp');
+
+guarinoApp.controller('RecicladoCtrl', function ($scope, $http) {
+
+    $http.get('api/reciclado').success(function(data) {
+		$scope.images = data; 
+    });
+
+    $scope.actual = 0;
+    $scope.isCurrentIndex = function(index) {
+    	return $scope.actual == index;
+    };
+    $scope.setCurrentIndex = function(index) {
+    	$scope.actual = index;	
+    }
+});
