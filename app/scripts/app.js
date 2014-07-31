@@ -15,10 +15,11 @@ var guarinoApp = angular.module('guarinoApp', [
         'ngRoute',
         'ngSanitize',
         'ngTouch',
-        'flow'
+        'flow',
+        'textAngular'
 ]);
     
-guarinoApp.config(function ($routeProvider) {
+guarinoApp.config(function($routeProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'views/home.html',

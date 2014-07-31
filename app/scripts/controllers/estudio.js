@@ -7,11 +7,10 @@
  * # EstudioCtrl
  * Controller of the guarinoApp
  */
-angular.module('guarinoApp')
-  .controller('EstudioCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+var guarinoApp = angular.module('guarinoApp')
+guarinoApp.controller('EstudioCtrl', function ($scope) {
+    $(".texto").mousewheel(function(event, delta) {
+        this.scrollTop -= (delta * 30);
+        event.preventDefault();
+    });
+});

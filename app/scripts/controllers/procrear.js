@@ -7,11 +7,10 @@
  * # ProcrearCtrl
  * Controller of the guarinoApp
  */
-angular.module('guarinoApp')
-  .controller('ProcrearCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+var guarinoApp = angular.module('guarinoApp')
+guarinoApp.controller('ProcrearCtrl', function ($scope) {
+    $(".texto").mousewheel(function(event, delta) {
+        this.scrollTop -= (delta * 30);
+        event.preventDefault();
+    });
+});

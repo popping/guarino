@@ -2,16 +2,27 @@
     <div class="borde float-div">
     	<div class="texto float-div">
     		<form>
-    			<ul>
-    				<li><label for="name">Nombre</label></li>
-	    			<li><input type="text" id="name" autofocus ng-model="contacto.name" required></li>
-	    			<li><label for="email">Email</label></li>
-	    			<li><input type="email" id="email" ng-model="contacto.email" required></li>
-	    			<li><label for="message">Mensaje</label></li>
-	    			<li><textarea id="message" ng-model="contacto.message" required></textarea></li>
-	    			<li><button ng-click="submitmail(contacto)">Enviar</button></li>
-    			</ul>
+    			<table>
+    				<tr>
+    					<td class="cel_normal"><label for="name">Nombre</label></td>
+    					<td class="cel_normal"><input type="text" id="name" ng-model="contacto.name" required not-empty></td>
+    					<td class="cel_normal"><label for="email">Email</label></td>
+    					<td class="cel_normal"><input type="email" id="email" ng-model="contacto.email" required></td>
+    					<td class="cel_normal"><label for="telefono">Telefono</label></td>
+    					<td class="cel_normal"><input type="text" id="telefono" ng-model="contacto.telefono" required></td>
+    				</tr>
+    				<tr>
+    					<td class="cel_textarea"><label for="message">Mensaje</label></td>
+    					<td class="cel_textarea" colspan=5><textarea id="message" ng-model="contacto.message" required></textarea></td>
+    				</tr>
+    				<tr>
+    					<td class="cel_button" colspan=6><button ng-disabled="!isValid()" ng-click="submitmail(contacto)">Enviar</button></td>
+    				</tr>
+    			</table>
     		</form>
+    		<div class="info-message" ng-hide="mensaje.length == 0">
+				<p>{{ mensaje }}</p>
+    		</div>
 		</div>
     </div>
 </div>

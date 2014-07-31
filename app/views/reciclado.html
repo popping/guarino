@@ -1,21 +1,28 @@
 <div class="proyectos_main float-div" ng-controller="RecicladoCtrl">
     <div class="imagen float-div">
         <div class="imagen_principal float-div">
-            <img align=center ng-repeat="image in images" ng-src="{{ image.imagen }}" ng-hide="!isCurrentIndex($index)">
+            <div class="content">
+                <img align=center ng-repeat="image in images" ng-src="{{ image.imagen }}" ng-hide="!isCurrentIndex($index)">
+            </div>
         </div>
-        <div class="left-arrow float-div"><img src="images/left-arrow.png"></div>
+        <div class="separator float-div"></div>
+        <div class="left-arrow float-div"><img src="images/left-arrow.png" ng-click="prevPage()" ng-hide="firstPage()" ng-class="leftButtonClick"></div>
         <div class="container float-div">
             <div class="thumbs">
-                <div class="thumb" ng-repeat="image in images">
-                    <img ng-src="{{ image.imagen }}" ng-click="setCurrentIndex($index)">                
+                <div class="thumb" ng-repeat="image in images" ng-hide="!inPage($index)">
+                    <div class="content">
+                        <img ng-src="{{ image.imagen }}" ng-click="setCurrentIndex($index)" ng-hide="image.imagen == ''">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="right-arrow float-div"><img src="images/right-arrow.png"></div>
+        <div class="right-arrow float-div"><img src="images/right-arrow.png" ng-click="nextPage()" ng-hide="lastPage()" ng-class="rightButtonClick"></div>
     </div>
+    <div class="up-arrow float-div"><img src="images/up-arrow.png" ng-click="pageTextUp()" ng-hide="firstTextPage()" ng-class="upButtonClick"></div>
 	<div class="texto float-div">
         <p>
 		  {{ images[actual].texto }}
         </p>
 	</div>
+    <div class="down-arrow float-div"><img src="images/down-arrow.png" ng-click="pageTextDown()" ng-hide="lastTextPage()" ng-class="downButtonClick"></div>
 </div>
