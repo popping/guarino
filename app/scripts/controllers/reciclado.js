@@ -65,21 +65,30 @@ guarinoApp.controller('RecicladoCtrl', function ($scope, $http, $timeout) {
     }
 
     $scope.lastPage = function() {
-        return ($scope.pageOffset + 2) >= ($scope.images.length - 1);
+        if(typeof($scope.images) != "undefined") {
+            return ($scope.pageOffset + 2) >= ($scope.images.length - 1);
+        } else {
+            return true;
+        }
     }
 
    // Scroll de Texto
     $(".texto").mousewheel(function(event, delta) {
         this.scrollTop -= (delta * 30);
         event.preventDefault();
+        $scope.$apply();
     });
 
     $scope.pageTextUp = function() {
-        $(".texto").scrollTop(-30);
+        var scroll = $(".texto").scrollTop() - 60;
+
+        $(".texto").scrollTop(scroll);
     };
 
     $scope.pageTextDown = function() {
-        $(".texto").scrollTop(30);
+        var scroll = $(".texto").scrollTop() + 60;
+
+        $(".texto").scrollTop(scroll);
     };
 
     $scope.firstTextPage = function() {
@@ -87,6 +96,6 @@ guarinoApp.controller('RecicladoCtrl', function ($scope, $http, $timeout) {
     };
 
     $scope.lastTextPage = function() {
-        return false;
+        return $(".texto").scrollTop() >= ($('.texto p').height() - $('.texto').height());
     };
 });
