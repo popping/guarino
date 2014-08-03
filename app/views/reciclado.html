@@ -18,11 +18,10 @@
         </div>
         <div class="right-arrow float-div"><img src="images/right-arrow.png" ng-click="nextPage()" ng-hide="lastPage()" ng-class="rightButtonClick"></div>
     </div>
-    <div class="up-arrow float-div"><img src="images/up-arrow.png" ng-click="pageTextUp()" ng-hide="firstTextPage()" ng-class="upButtonClick"></div>
-	<div class="texto float-div">
+	<div class="texto float-div" scrollable>
         <p>
-		  {{ images[actual].texto }}
+            {{ images[actual].texto }}
         </p>
 	</div>
-    <div class="down-arrow float-div"><img src="images/down-arrow.png" ng-click="pageTextDown()" ng-hide="lastTextPage()" ng-class="downButtonClick"></div>
 </div>
+    

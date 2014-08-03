@@ -274,3 +274,24 @@ guarinoApp.controller('MainCtrl', function($scope) {
     };
 });
 
+guarinoApp.directive("scrollable", [function () {
+    return function(scope, elm) {
+        elm.mCustomScrollbar({
+                axis: "y",
+                theme: "rounded-dots-dark",
+                scrollbarPosition: "outside",
+                scrollButtons: {
+                    enable:true, 
+                    scrollType:"stepped"
+                },
+                keyboard: {
+                    scrollType:"stepped"
+                },
+                autoExpandScrollbar: true,
+                scrollInertia: 250,
+                advanced: {
+                    updateOnContentResize: true
+                }
+        }); 
+    };
+}]);

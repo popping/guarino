@@ -27,6 +27,8 @@ guarinoApp.controller('RecicladoCtrl', function ($scope, $http, $timeout) {
     $scope.pageOffset       = 0;
     $scope.leftButtonClick  = "";
     $scope.rightButtonClick = "";
+    $scope.upButtonClick    = "";
+    $scope.downButtonClick  = "";
 
     $scope.isCurrentIndex = function(index) {
         return $scope.actual == index;
@@ -62,7 +64,7 @@ guarinoApp.controller('RecicladoCtrl', function ($scope, $http, $timeout) {
 
     $scope.firstPage = function() {
         return $scope.pageOffset == 0;
-    }
+    };
 
     $scope.lastPage = function() {
         if(typeof($scope.images) != "undefined") {
@@ -70,32 +72,6 @@ guarinoApp.controller('RecicladoCtrl', function ($scope, $http, $timeout) {
         } else {
             return true;
         }
-    }
-
-   // Scroll de Texto
-    $(".texto").mousewheel(function(event, delta) {
-        this.scrollTop -= (delta * 30);
-        event.preventDefault();
-        $scope.$apply();
-    });
-
-    $scope.pageTextUp = function() {
-        var scroll = $(".texto").scrollTop() - 60;
-
-        $(".texto").scrollTop(scroll);
-    };
-
-    $scope.pageTextDown = function() {
-        var scroll = $(".texto").scrollTop() + 60;
-
-        $(".texto").scrollTop(scroll);
-    };
-
-    $scope.firstTextPage = function() {
-        return $(".texto").scrollTop() == 0;
-    };
-
-    $scope.lastTextPage = function() {
-        return $(".texto").scrollTop() >= ($('.texto p').height() - $('.texto').height());
     };
 });
+

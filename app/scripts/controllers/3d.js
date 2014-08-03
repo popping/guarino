@@ -61,36 +61,13 @@ guarinoApp.controller('3dCtrl', function ($scope, $http, $timeout) {
 
     $scope.firstPage = function() {
         return $scope.pageOffset == 0;
-    }
+    };
 
     $scope.lastPage = function() {
-        return ($scope.pageOffset + 2) >= ($scope.images.length - 1);
-    }
-
-   // Scroll de Texto
-    $(".texto").mousewheel(function(event, delta) {
-        this.scrollTop -= (delta * 30);
-        event.preventDefault();
-        $scope.$apply();
-    });
-
-    $scope.pageTextUp = function() {
-        var scroll = $(".texto").scrollTop() - 60;
-
-        $(".texto").scrollTop(scroll);
-    };
-
-    $scope.pageTextDown = function() {
-        var scroll = $(".texto").scrollTop() + 60;
-
-        $(".texto").scrollTop(scroll);
-    };
-
-    $scope.firstTextPage = function() {
-        return $(".texto").scrollTop() == 0;
-    };
-
-    $scope.lastTextPage = function() {
-        return $(".texto").scrollTop() >= ($('.texto p').height() - $('.texto').height());
+        if(typeof($scope.images) != "undefined") {
+            return ($scope.pageOffset + 2) >= ($scope.images.length - 1);
+        } else {
+            return true;
+        }
     };
 });

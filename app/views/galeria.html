@@ -5,13 +5,13 @@
                 <img ng-repeat="image in images" ng-src="{{ image.imagen }}" ng-hide="!isCurrentIndex($index)">
             </div>
         </div>
-        <div class="left-arrow float-div"><img src="images/left-arrow.png" ng-click="prevPage()" ng-hide="firstPage()" ng-class="leftButtonClick"></div>
         <div class="separator float-div"></div>
+        <div class="left-arrow float-div"><img src="images/left-arrow.png" ng-click="prevPage()" ng-hide="firstPage()" ng-class="leftButtonClick"></div>
         <div class="container float-div">
             <div class="thumbs">
                 <div class="thumb" ng-repeat="image in images" ng-hide="!inPage($index)">
                     <div class="content">
-                        <img ng-src="{{ image.imagen }}" ng-click="setCurrentIndex($index)">                
+                        <img ng-src="{{ image.imagen }}" ng-click="setCurrentIndex($index)" ng-hide="image.imagen == ''">                
                     </div>
                 </div>
             </div>

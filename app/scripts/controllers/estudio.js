@@ -9,8 +9,6 @@
  */
 var guarinoApp = angular.module('guarinoApp')
 guarinoApp.controller('EstudioCtrl', function ($scope) {
-    $(".texto").mousewheel(function(event, delta) {
-        this.scrollTop -= (delta * 30);
-        event.preventDefault();
-    });
+    // Estudio Controller
 });
+ 

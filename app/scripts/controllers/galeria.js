@@ -11,6 +11,15 @@ guarinoApp = angular.module('guarinoApp')
 guarinoApp.controller('GaleriaCtrl', function ($scope, $http, $timeout) {
     $http.get('api/galeria').success(function(data) {
 		$scope.images = data; 
+
+        var totalElements = $scope.images.length;
+
+        for(var i = 0; i < (6 - totalElements); i++) {
+            $scope.images[$scope.images.length] = {
+                imagen: '',
+                texto: ''
+            }
+        }
     });
 
     $scope.actual           = 0;
