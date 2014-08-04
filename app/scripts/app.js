@@ -19,7 +19,10 @@ var guarinoApp = angular.module('guarinoApp', [
         'textAngular'
 ]);
     
-guarinoApp.config(function($routeProvider) {
+guarinoApp.config(function($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
+    $locationProvider.hashPrefix('!');
+    
     $routeProvider
         .when('/', {
             templateUrl: 'views/home.html',
@@ -37,15 +40,11 @@ guarinoApp.config(function($routeProvider) {
           templateUrl: 'views/procrear.html',
           controller: 'ProcrearCtrl'
         })
-        .when('/proyectos', {
-          templateUrl: 'views/proyectos.html',
-          controller: 'ProyectosCtrl'
-        })
-        .when('/proyectos/3d', {
+        .when('/3d', {
           templateUrl: 'views/3d.html',
           controller: '3dCtrl'
         })
-        .when('/proyectos/reciclado', {
+        .when('/reciclado', {
           templateUrl: 'views/reciclado.html',
           controller: 'RecicladoCtrl'
         })
@@ -64,7 +63,7 @@ guarinoApp.controller('MainCtrl', function($scope) {
         items: [
             {
                 name: 'Home',
-                link: '#/',
+                link: '/',
                 panel: 'superior',
                 direccion: 'horizontal',
                 index: 1,
@@ -74,7 +73,7 @@ guarinoApp.controller('MainCtrl', function($scope) {
             },
             {
                 name: 'Estudio',
-                link: '#/estudio',
+                link: '/estudio',
                 panel: 'superior',
                 direccion: 'horizontal',
                 index: 2,
@@ -84,7 +83,7 @@ guarinoApp.controller('MainCtrl', function($scope) {
             },
             {
                 name: 'Galeria',
-                link: '#/galeria',
+                link: '/galeria',
                 panel: 'superior',
                 direccion: 'horizontal',
                 index: 3,
@@ -94,7 +93,7 @@ guarinoApp.controller('MainCtrl', function($scope) {
             },
             {
                 name: 'Procrear',
-                link: '#/procrear',
+                link: '/procrear',
                 panel: 'superior',
                 direccion: 'horizontal',
                 index: 4,
@@ -113,7 +112,7 @@ guarinoApp.controller('MainCtrl', function($scope) {
                 items: [
                     {  
                         name: '3d',
-                        link: '#/proyectos/3d',
+                        link: '/3d',
                         panel: 'superior',
                         direccion: 'vertical',
                         index: 6,
@@ -123,7 +122,7 @@ guarinoApp.controller('MainCtrl', function($scope) {
                     }, 
                     {
                         name: 'Reciclado',
-                        link: '#/proyectos/reciclado',
+                        link: '/reciclado',
                         panel: 'superior',
                         direccion: 'vertical',
                         index: 7,
@@ -135,7 +134,7 @@ guarinoApp.controller('MainCtrl', function($scope) {
             },
             {
                 name: 'Contacto',
-                link: '#/contacto',
+                link: '/contacto',
                 panel: 'superior',
                 direccion: 'horizontal',
                 index: 8,
@@ -150,7 +149,7 @@ guarinoApp.controller('MainCtrl', function($scope) {
         items: [
             {
                 name: 'Home',
-                link: '#/',
+                link: '/',
                 panel: 'lateral',
                 direccion: 'vertical',
                 index: 1,
@@ -160,7 +159,7 @@ guarinoApp.controller('MainCtrl', function($scope) {
             },
             {
                 name: 'Estudio',
-                link: '#/estudio',
+                link: '/estudio',
                 panel: 'lateral',
                 direccion: 'vertical',
                 index: 2,
@@ -170,7 +169,7 @@ guarinoApp.controller('MainCtrl', function($scope) {
             },
             {
                 name: 'Galeria',
-                link: '#/galeria',
+                link: '/galeria',
                 panel: 'lateral',
                 direccion: 'vertical',
                 index: 3,
@@ -180,7 +179,7 @@ guarinoApp.controller('MainCtrl', function($scope) {
             },
             {
                 name: 'Procrear',
-                link: '#/procrear',
+                link: '/procrear',
                 panel: 'lateral',
                 direccion: 'vertical',
                 index: 4,
@@ -190,7 +189,7 @@ guarinoApp.controller('MainCtrl', function($scope) {
             },
             {
                 name: 'Proyectos',
-                link: '#/proyectos',
+                link: '',
                 panel: 'lateral',
                 direccion: 'vertical',
                 index: 5,
@@ -199,7 +198,7 @@ guarinoApp.controller('MainCtrl', function($scope) {
                 items: [
                     {  
                         name: '3d',
-                        link: '#/proyectos/3d',
+                        link: '/3d',
                         panel: 'lateral',
                         direccion: 'vertical',
                         index: 6,
@@ -209,7 +208,7 @@ guarinoApp.controller('MainCtrl', function($scope) {
                     }, 
                     {
                         name: 'Reciclado',
-                        link: '#/proyectos/reciclado',
+                        link: '/reciclado',
                         panel: 'lateral',
                         direccion: 'vertical',
                         index: 7,

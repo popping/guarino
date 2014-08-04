@@ -1,7 +1,6 @@
 // bower:scss
 // endbower
 
-@import "compass/reset";    
 @import "fonts.css";
 @import "animations.css";
 
@@ -122,16 +121,14 @@ a {
             li {
                 line-height: 15px;
                 list-style-type: none;
-                font-family: ubunturegular;
-                font-weight: bold;
+                font-family: ubuntubold;
                 text-transform: uppercase;
-                font-size: 6pt;
+                font-size: 5pt;
                 color: $menu-lateral-color;
                 a {
-                    font-family: ubunturegular;
-                    font-weight: bold;
+                    font-family: ubuntubold;
                     text-transform: uppercase;
-                    font-size: 6pt;
+                    font-size: 5pt;
                     color: $menu-lateral-color;
                 }
                 a:hover {

@@ -64,6 +64,10 @@ guarinoApp.controller('GaleriaCtrl', function ($scope, $http, $timeout) {
     }
 
     $scope.lastPage = function() {
-        return ($scope.pageOffset + 5) == ($scope.images.length - 1);
+        if(typeof($scope.images) != "undefined") {
+            return ($scope.pageOffset + 5) >= ($scope.images.length - 1);
+        } else {
+            return true;
+        }
     }
 });
