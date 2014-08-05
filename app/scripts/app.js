@@ -277,7 +277,7 @@ guarinoApp.directive("scrollable", [function () {
     return function(scope, elm) {
         elm.mCustomScrollbar({
                 axis: "y",
-                theme: "rounded-dots-dark",
+                theme: "light-3",
                 scrollbarPosition: "outside",
                 scrollButtons: {
                     enable:true, 
