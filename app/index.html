@@ -22,9 +22,9 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="main" ng-controller="MainCtrl">
+    <div class="main" ng-controller="MainCtrl" lazzy-load>
             <div class="background">
-                <img class="img-background" src="/images/fondo-imagen-1362x600.png">
+                <img class="img-background" src="/images/fondo-imagen-1362x600.png" imageonload>
             </div>
             <header class="cabecera float-div">
                 <div class="logo-background float-div">
@@ -33,10 +33,10 @@
                 <nav class="menu-central float-div">
                     <ul>
                         <li ng-repeat="item in menuCentral.items">
-                            <a ng-href="{{ item.link }}" ng-click="setSelected(item)">{{ item.name }}</a>
+                            <a ng-href="{{ item.link }}" ng-click="setSelected(item)" ng-bind="item.name"></a>
                             <ul class="sub" ng-if="item.items != null" ng-show="item.popup">
                                 <li ng-repeat="subitem in item.items">
-                                    <a ng-href="{{ subitem.link }}" ng-click="setSelected(subitem)">{{ subitem.name }}</a>
+                                    <a ng-href="{{ subitem.link }}" ng-click="setSelected(subitem)" ng-bind="subitem.name "></a>
                                 </li>
                             </ul>
                         </li>
@@ -54,10 +54,10 @@
             <nav class="menu-lateral float-div">
                 <ul>
                     <li ng-repeat="item in menuLateral.items">
-                        <a ng-href="{{ item.link }}" ng-click="setSelected(item)">{{ item.name }}</a>
+                        <a ng-href="{{ item.link }}" ng-click="setSelected(item)" ng-bind="item.name"></a>
                         <ul class="sub" ng-if="item.items != null" ng-show="item.popup">
                             <li ng-repeat="subitem in item.items">
-                                <a ng-href="{{ subitem.link }}" ng-click="setSelected(subitem)">{{ subitem.name }}</a>
+                                <a ng-href="{{ subitem.link }}" ng-click="setSelected(subitem)" ng-bind="subitem.name"></a>
                             </li>
                         </ul>
                     </li>

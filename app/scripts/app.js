@@ -294,3 +294,27 @@ guarinoApp.directive("scrollable", [function () {
         }); 
     };
 }]);
+
+guarinoApp.directive('imageonload', function($timeout) {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            element.bind('load', function() {
+                alert('image is loaded');
+            });
+        }
+    };
+});
+
+guarinoApp.directive('lazzyLoad', function($timeout) {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            element.hide();
+
+            $timeout(function() {
+                element.show();
+            });
+        }
+    };
+});
