@@ -8,9 +8,11 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
+    <!-- build:css(.tmp) styles/admin.css -->
     <link rel="stylesheet" href="styles/admin.css">
     <!-- endbuild -->
   </head>
@@ -24,6 +26,31 @@
         <div class="background">
             <img class="img-background" src="/images/fondo-imagen-1362x600.png">
         </div>
+        <header class="cabecera float-div">
+                <div class="logo-background float-div">
+                    <img src="images/logo-268x142.png" class="logo" preload-image>                    
+                </div>
+                <nav class="menu-central float-div">
+                    <ul>
+                        <li ng-repeat="item in menuCentral.items">
+                            <a ng-href="{{ item.link }}" ng-click="setSelected(item)" ng-bind="item.name"></a>
+                            <ul class="sub" ng-if="item.items != null" ng-show="item.popup">
+                                <li ng-repeat="subitem in item.items">
+                                    <a ng-href="{{ subitem.link }}" ng-click="setSelected(subitem)" ng-bind="subitem.name "></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>   
+                <div class="contactos-background float-div">
+                    <ul>
+                        <li>02285-15220147</li>
+                        <li>Mitre 754</li>
+                        <li><a href="mailto:ag.estudiointegral@yahoo.com.ar">ag.estudiointegral@yahoo.com.ar</a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/arqariadna.guarino">face: arqariadna.guarino</a></li>
+                    </ul>
+                </div>
+            </header>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -55,6 +82,8 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/flow.js/dist/flow.js"></script>
     <script src="bower_components/ng-flow/dist/ng-flow.js"></script>
+    <script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

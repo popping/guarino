@@ -8,7 +8,7 @@
  * Controller of the guarinoApp
  */
 var guarinoApp = angular.module('guarinoApp')
-guarinoApp.controller('EstudioCtrl', function ($scope) {
+guarinoApp.controller('EstudioCtrl', function($scope) {
     // Estudio Controller
 });
  

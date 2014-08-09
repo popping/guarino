@@ -1,0 +1,75 @@
+{
+    "items": [
+        {
+            "name": "Home",
+            "link": "/",
+            "panel": "lateral",
+            "direccion": "vertical",
+            "index": 1,
+            "popup": false,
+            "subitem": false,
+            "items": null
+        },
+        {
+            "name": "Estudio",
+            "link": "/estudio",
+            "panel": "lateral",
+            "direccion": "vertical",
+            "index": 2,
+            "popup": false,
+            "subitem": false,
+            "items": null
+        },
+        {
+            "name": "Galeria",
+            "link": "/galeria",
+            "panel": "lateral",
+            "direccion": "vertical",
+            "index": 3,
+            "popup": false,
+            "subitem": false,
+            "items": null
+        },
+        {
+            "name": "Procrear",
+            "link": "/procrear",
+            "panel": "lateral",
+            "direccion": "vertical",
+            "index": 4,
+            "popup": false,
+            "subitem": false,
+            "items": null
+        },
+        {
+            "name": "Proyectos",
+            "link": "",
+            "panel": "lateral",
+            "direccion": "vertical",
+            "index": 5,
+            "popup": false,
+            "subitem": false,
+            "items": [
+                {  
+                    "name": "3d",
+                    "link": "/3d",
+                    "panel": "lateral",
+                    "direccion": "vertical",
+                    "index": 6,
+                    "popup": false,
+                    "subitem": true,
+                    "items": null
+                }, 
+                {
+                    "name": "Reciclado",
+                    "link": "/reciclado",
+                    "panel": "lateral",
+                    "direccion": "vertical",
+                    "index": 7,
+                    "popup": false,
+                    "subitem": true,
+                    "items": null
+                }
+            ]
+        }     
+    ]
+}

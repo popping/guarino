@@ -1,22 +1,22 @@
 <div class="contacto_main float-div" ng-controller="ContactoCtrl">
     <div class="borde float-div">
     	<div class="texto float-div">
-    		<form>
+    		<form name="form">
     			<table>
     				<tr>
     					<td class="cel_normal"><label for="name">Nombre</label></td>
-    					<td class="cel_normal"><input type="text" id="name" ng-model="contacto.name" required not-empty></td>
+    					<td class="cel_normal"><input type="text" id="name" ng-model="contacto.name" required not-empty ng-focus></td>
     					<td class="cel_normal"><label for="email">Email</label></td>
     					<td class="cel_normal"><input type="email" id="email" ng-model="contacto.email" required></td>
     					<td class="cel_normal"><label for="telefono">Telefono</label></td>
-    					<td class="cel_normal"><input type="text" id="telefono" ng-model="contacto.telefono" required></td>
+    					<td class="cel_normal"><input type="text" id="telefono" ng-model="contacto.telefono"></td>
     				</tr>
     				<tr>
     					<td class="cel_textarea"><label for="message">Mensaje</label></td>
     					<td class="cel_textarea" colspan=5><textarea id="message" ng-model="contacto.message" required></textarea></td>
     				</tr>
     				<tr>
-    					<td class="cel_button" colspan=6><button ng-disabled="!isValid()" ng-click="submitmail(contacto)">Enviar</button></td>
+    					<td class="cel_button" colspan=6><button ng-disabled="!form.$valid" ng-click="submitmail(contacto)">Enviar</button></td>
     				</tr>
     			</table>
     		</form>

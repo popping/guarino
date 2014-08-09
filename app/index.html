@@ -5,6 +5,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <base href="/" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -16,7 +17,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="guarinoApp">
+  <body ng-app="guarinoApp" style="display: block; background-color: #FFF;">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -24,11 +25,11 @@
     <!-- Add your site or application content here -->
     <div class="main" ng-controller="MainCtrl" lazzy-load>
             <div class="background">
-                <img class="img-background" src="/images/fondo-imagen-1362x600.png" imageonload>
+                <img class="img-background" src="/images/fondo-imagen-1362x600.png">
             </div>
             <header class="cabecera float-div">
                 <div class="logo-background float-div">
-                    <img src="images/logo-268x142.png" class="logo">                    
+                    <img src="images/logo-268x142.png" class="logo" preload-image>                    
                 </div>
                 <nav class="menu-central float-div">
                     <ul>
@@ -45,7 +46,7 @@
                 <div class="contactos-background float-div">
                     <ul>
                         <li>02285-15220147</li>
-                        <li><a href="mailto:info@arquitecturaguarino.com.ar">info@arquitecturaguarino.com.ar</a></li>
+                        <li>Mitre 754</li>
                         <li><a href="mailto:ag.estudiointegral@yahoo.com.ar">ag.estudiointegral@yahoo.com.ar</a></li>
                         <li><a target="_blank" href="https://www.facebook.com/arqariadna.guarino">face: arqariadna.guarino</a></li>
                     </ul>
@@ -101,7 +102,6 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/flow.js/dist/flow.js"></script>
     <script src="bower_components/ng-flow/dist/ng-flow.js"></script>
-    <script src="bower_components/textAngular/dist/textAngular.min.js"></script>
     <script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
     <!-- endbower -->
@@ -116,6 +116,10 @@
         <script src="scripts/controllers/3d.js"></script>
         <script src="scripts/controllers/reciclado.js"></script>
         <script src="scripts/controllers/contacto.js"></script>
+        <script src="scripts/services/menufactory.js"></script>
+        <script src="scripts/directives/scrollable.js"></script>
+        <script src="scripts/directives/lazzyload.js"></script>
+        <script src="scripts/directives/ngfocus.js"></script>
         <!-- endbuild -->
 </body>
 </html>

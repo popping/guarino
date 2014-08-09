@@ -87,6 +87,12 @@ module.exports = function(grunt) {
       phpTest: {
         files: ['<%= yeoman.app %>/api/{,{config,src,tests}/**/}/*'],
         tasks: ['shell:phpTest']
+      },
+      data: {
+        files: ['<%= yeoman.app %>/data/{,*/}*.json'],
+        options: {
+          livereload: '<%= connect.options.livereload %>'
+        }
       }      
     },
 
@@ -224,7 +230,7 @@ module.exports = function(grunt) {
         cwd: '<%= yeoman.app %>'
       },
       app: {
-        src: ['<%= yeoman.app %>/index.html'],
+        src: ['<%= yeoman.app %>/index.html', '<%= yeoman.app %>/admin.html'],
         ignorePath:  /..\//
       },
       sass: {
@@ -404,7 +410,8 @@ module.exports = function(grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/**'
+            'styles/fonts/**',
+            'data/**'
           ]
         }, {
           expand: true,

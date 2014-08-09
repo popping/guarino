@@ -8,6 +8,6 @@
  * Controller of the guarinoApp
  */
 var guarinoApp = angular.module('guarinoApp')
-guarinoApp.controller('ProcrearCtrl', function ($scope, $timeout) {
+guarinoApp.controller('ProcrearCtrl', function($scope) {
     // Procrear Controller
 });

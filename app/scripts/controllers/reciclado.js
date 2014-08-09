@@ -7,7 +7,7 @@
  * # RecicladoCtrl
  * Controller of the guarinoApp
  */
-guarinoApp = angular.module('guarinoApp');
+var guarinoApp = angular.module('guarinoApp');
 
 guarinoApp.controller('RecicladoCtrl', function ($scope, $http, $timeout) {
     $http.get('api/reciclado').success(function(data) {

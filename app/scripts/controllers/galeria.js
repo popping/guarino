@@ -7,7 +7,8 @@
  * # GaleriaCtrl
  * Controller of the guarinoApp
  */
-guarinoApp = angular.module('guarinoApp')
+var guarinoApp = angular.module('guarinoApp');
+
 guarinoApp.controller('GaleriaCtrl', function ($scope, $http, $timeout) {
     $http.get('api/galeria').success(function(data) {
 		$scope.images = data; 

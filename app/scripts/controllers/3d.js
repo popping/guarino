@@ -7,7 +7,8 @@
  * # 3dCtrl
  * Controller of the guarinoApp
  */
-guarinoApp = angular.module('guarinoApp');
+var guarinoApp = angular.module('guarinoApp');
+
 guarinoApp.controller('3dCtrl', function ($scope, $http, $timeout) {
   	$http.get('api/3d').success(function(data) {
 		$scope.images = data;

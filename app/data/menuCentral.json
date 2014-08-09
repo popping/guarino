@@ -1,0 +1,85 @@
+{
+    "items": [
+        {
+            "name": "Home",
+            "link": "/",
+            "panel": "superior",
+            "direccion": "horizontal",
+            "index": 1,
+            "popup": false,
+            "subitem": false,
+            "items": null
+        },
+        {
+            "name": "Estudio",
+            "link": "/estudio",
+            "panel": "superior",
+            "direccion": "horizontal",
+            "index": 2,
+            "popup": false,
+            "subitem": false,
+            "items": null
+        },
+        {
+            "name": "Galeria",
+            "link": "/galeria",
+            "panel": "superior",
+            "direccion": "horizontal",
+            "index": 3,
+            "popup": false,
+            "subitem": false,
+            "items": null
+        },
+        {
+            "name": "Procrear",
+            "link": "/procrear",
+            "panel": "superior",
+            "direccion": "horizontal",
+            "index": 4,
+            "popup": false,
+            "subitem": false,
+            "items": null
+        },
+        {
+            "name": "Proyectos",
+            "link": "",
+            "panel": "superior",
+            "direccion": "horizontal",
+            "index": 5,
+            "popup": false,
+            "subitem": false,
+            "items": [
+                {  
+                    "name": "3d",
+                    "link": "/3d",
+                    "panel": "superior",
+                    "direccion": "vertical",
+                    "index": 6,
+                    "popup": false,
+                    "subitem": true,
+                    "items": null
+                }, 
+                {
+                    "name": "Reciclado",
+                    "link": "/reciclado",
+                    "panel": "superior",
+                    "direccion": "vertical",
+                    "index": 7,
+                    "popup": false,
+                    "subitem": true,
+                    "items": null
+                }
+            ]
+        },
+        {
+            "name": "Contacto",
+            "link": "/contacto",
+            "panel": "superior",
+            "direccion": "horizontal",
+            "index": 8,
+            "popup": false,
+            "subitem": false,
+            "items": null
+        }        
+    ]
+}

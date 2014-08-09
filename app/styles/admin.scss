@@ -3,6 +3,10 @@
 
 $page-width: 1362px;
 $page-height: 600px;
+$font-base: 12px;
+$contacto-link-color: #f6f6f6;
+$menu-central-color: #00478c;
+$menu-lateral-color: #f6f6f6;
 
 .main {
     position: absolute;
@@ -20,6 +24,103 @@ $page-height: 600px;
             max-width: 100%;
             height: auto;
             z-index: -1;
+        }
+    }
+}
+
+.float-div {
+    display: block;
+    position: absolute;  
+}
+
+.cabecera {
+    top: 18px;
+    left: 0px;
+    right: 0px;
+    height: 84px;
+    background-image: url('../images/header-background-1362x84.png');
+    z-index: 10;
+    .logo-background {
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        width: 268px;
+        background-color: #FFFFFF;
+        .logo {
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            height: 142;
+        }
+    }
+    .menu-central {
+        top: 38px;
+        left: 375px;
+        bottom: 0px;
+        right: 0px;
+        ul {
+            li {
+                display: inline-block;
+                list-style-type: none;
+                line-height: 13px;
+                margin-right: 68px;
+                a, span {
+                    font-family: ubunturegular;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: 9pt;
+                    color: $menu-central-color;
+                }
+                a:hover {
+                    color: tint($menu-central-color, 20%);    
+                }
+                ul {
+                    position: absolute;
+                    text-indent: 8px;
+                    li {
+                        display: list-item;
+                        a {
+                            font-family: ubunturegular;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            font-size: 7pt;
+                            color: $menu-central-color;
+                        }
+                        a:hover {
+                            color: tint($menu-central-color, 20%);    
+                        }   
+                    }
+                }
+            }
+        }
+    }
+    .contactos-background {
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 180px;
+        background-color: #00478c;
+        ul {
+            margin-top: 15px;
+            margin-right: 10px;
+            text-align: right;
+            li {
+                line-height: 15px;
+                list-style-type: none;
+                font-family: ubuntubold;
+                text-transform: uppercase;
+                font-size: 5pt;
+                color: $menu-lateral-color;
+                a {
+                    font-family: ubuntubold;
+                    text-transform: uppercase;
+                    font-size: 5pt;
+                    color: $menu-lateral-color;
+                }
+                a:hover {
+                    color: shade($menu-lateral-color, 20%);
+                }
+            }
         }
     }
 }

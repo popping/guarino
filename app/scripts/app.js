@@ -15,8 +15,7 @@ var guarinoApp = angular.module('guarinoApp', [
         'ngRoute',
         'ngSanitize',
         'ngTouch',
-        'flow',
-        'textAngular'
+        'flow'
 ]);
     
 guarinoApp.config(function($routeProvider, $locationProvider) {
@@ -57,176 +56,22 @@ guarinoApp.config(function($routeProvider, $locationProvider) {
         });
 });
 
-guarinoApp.controller('MainCtrl', function($scope) {
+guarinoApp.controller('MainCtrl', function($scope, $timeout, menuFactory) {
+    // Cargo los menues
+    menuFactory.menuCentral.get(function(items) {
+        $scope.menuCentral  = items;    
+        $scope.itemSelected = $scope.menuCentral.items[0];
+    });
 
-    $scope.menuCentral = {
-        items: [
-            {
-                name: 'Home',
-                link: '/',
-                panel: 'superior',
-                direccion: 'horizontal',
-                index: 1,
-                popup: false,
-                subitem: false,
-                items: null
-            },
-            {
-                name: 'Estudio',
-                link: '/estudio',
-                panel: 'superior',
-                direccion: 'horizontal',
-                index: 2,
-                popup: false,
-                subitem: false,
-                items: null
-            },
-            {
-                name: 'Galeria',
-                link: '/galeria',
-                panel: 'superior',
-                direccion: 'horizontal',
-                index: 3,
-                popup: false,
-                subitem: false,
-                items: null
-            },
-            {
-                name: 'Procrear',
-                link: '/procrear',
-                panel: 'superior',
-                direccion: 'horizontal',
-                index: 4,
-                popup: false,
-                subitem: false,
-                items: null
-            },
-            {
-                name: 'Proyectos',
-                link: '',
-                panel: 'superior',
-                direccion: 'horizontal',
-                index: 5,
-                popup: false,
-                subitem: false,
-                items: [
-                    {  
-                        name: '3d',
-                        link: '/3d',
-                        panel: 'superior',
-                        direccion: 'vertical',
-                        index: 6,
-                        popup: false,
-                        subitem: true,
-                        items: null
-                    }, 
-                    {
-                        name: 'Reciclado',
-                        link: '/reciclado',
-                        panel: 'superior',
-                        direccion: 'vertical',
-                        index: 7,
-                        popup: false,
-                        subitem: true,
-                        items: null
-                    }
-                ]
-            },
-            {
-                name: 'Contacto',
-                link: '/contacto',
-                panel: 'superior',
-                direccion: 'horizontal',
-                index: 8,
-                popup: false,
-                subitem: false,
-                items: null
-            }        
-        ]
-    };
+    menuFactory.menuLateral.get(function(items) {
+        $scope.menuLateral = items;
+    });
 
-    $scope.menuLateral = {
-        items: [
-            {
-                name: 'Home',
-                link: '/',
-                panel: 'lateral',
-                direccion: 'vertical',
-                index: 1,
-                popup: false,
-                subitem: false,
-                items: null
-            },
-            {
-                name: 'Estudio',
-                link: '/estudio',
-                panel: 'lateral',
-                direccion: 'vertical',
-                index: 2,
-                popup: false,
-                subitem: false,
-                items: null
-            },
-            {
-                name: 'Galeria',
-                link: '/galeria',
-                panel: 'lateral',
-                direccion: 'vertical',
-                index: 3,
-                popup: false,
-                subitem: false,
-                items: null
-            },
-            {
-                name: 'Procrear',
-                link: '/procrear',
-                panel: 'lateral',
-                direccion: 'vertical',
-                index: 4,
-                popup: false,
-                subitem: false,
-                items: null
-            },
-            {
-                name: 'Proyectos',
-                link: '',
-                panel: 'lateral',
-                direccion: 'vertical',
-                index: 5,
-                popup: false,
-                subitem: false,
-                items: [
-                    {  
-                        name: '3d',
-                        link: '/3d',
-                        panel: 'lateral',
-                        direccion: 'vertical',
-                        index: 6,
-                        popup: false,
-                        subitem: true,
-                        items: null
-                    }, 
-                    {
-                        name: 'Reciclado',
-                        link: '/reciclado',
-                        panel: 'lateral',
-                        direccion: 'vertical',
-                        index: 7,
-                        popup: false,
-                        subitem: true,
-                        items: null
-                    }
-                ]
-            }     
-        ]
-    };
-
-    $scope.itemSelected     = $scope.menuCentral.items[0];
     $scope.panelAnterior    = '';
     $scope.classAnimation   = '';
     $scope.lastOpenPopup    = null;
 
-    $scope.setSelected      = function(item) {
+    $scope.setSelected = function(item) {
         var panel       = item.panel;
         var direccion   = item.direccion;
         var index       = item.index;
@@ -270,51 +115,5 @@ guarinoApp.controller('MainCtrl', function($scope) {
 
         $scope.itemSelected = item;
         $scope.panelAnterior = panel;
-    };
-});
-
-guarinoApp.directive("scrollable", [function () {
-    return function(scope, elm) {
-        elm.mCustomScrollbar({
-                axis: "y",
-                theme: "light-3",
-                scrollbarPosition: "outside",
-                scrollButtons: {
-                    enable:true, 
-                    scrollType:"stepped"
-                },
-                keyboard: {
-                    scrollType:"stepped"
-                },
-                autoExpandScrollbar: true,
-                scrollInertia: 250,
-                advanced: {
-                    updateOnContentResize: true
-                }
-        }); 
-    };
-}]);
-
-guarinoApp.directive('imageonload', function($timeout) {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            element.bind('load', function() {
-                alert('image is loaded');
-            });
-        }
-    };
-});
-
-guarinoApp.directive('lazzyLoad', function($timeout) {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            element.hide();
-
-            $timeout(function() {
-                element.show();
-            });
-        }
     };
 });

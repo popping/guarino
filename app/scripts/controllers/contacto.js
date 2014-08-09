@@ -7,9 +7,9 @@
  * # ContactoCtrl
  * Controller of the guarinoApp
  */
-guarinoApp = angular.module('guarinoApp');
+var guarinoApp = angular.module('guarinoApp');
+
 guarinoApp.controller('ContactoCtrl', function ($scope, $http, $timeout) {
-    
     $scope.contacto = {
         name: '',
         email: '',
@@ -34,14 +34,5 @@ guarinoApp.controller('ContactoCtrl', function ($scope, $http, $timeout) {
             }, 2000);
         });
     }
-
-    $scope.isValid = function() {
-        return  ($('#name').hasClass('ng-valid')) && 
-                ($('#email').hasClass('ng-valid')) &&
-                ($('#telefono').hasClass('ng-valid')) &&
-                ($('#message').hasClass('ng-valid'));
-    }
-
-    $('#name').focus();  
 });
 
